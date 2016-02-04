@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ContactBook</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class='container'>
+	<div class='pull-right'>
+		<% if user_signed_in? %>
+			<%= link_to 'Edit Profile', edit_user_registration_path, class: 'btn btn-caution' %>
+			<%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
+		<% end %>
+	</div
+
+	<%= yield %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<h1>Contact Search Results</h1>
+
+<ul>
+	<% @results.each do |result| %>
+		<li><%= "#{result.first_name} #{result.last_name}" %></li>
+	<% end %>
+</ul>
